@@ -1,0 +1,28 @@
+{
+	"manifest_version": 3,
+	"name": "Youtube Music Alphabetical Playlists",
+	"description": "Sorts your Youtube Music Playlists in alphabetical order",
+	"version": "1.0",
+	"permissions": [
+		"activeTab",
+		"storage"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"https://music.youtube.com/*"
+			],
+			"js": [
+				"content.js"
+			]
+		}
+	],
+	"action": {
+		"default_icon": {
+			"128": "icon128.png"
+		}
+	},
+	"background": {
+		"service_worker": "background.js"
+	}
+}
